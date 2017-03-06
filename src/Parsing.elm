@@ -55,5 +55,5 @@ pointListHelp revPoints =
 
 spaces : Parser ()
 spaces =
-  ignoreWhile (\char -> char == ' ')
+    ignoreWhile (\char -> (char == '\n') || (char == ' ') )
 

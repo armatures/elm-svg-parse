@@ -16,7 +16,9 @@ main =
         }
 
 init : (Model, Cmd Msg)
-init = {points = Parsing.parsePoint "[(4,4),(5,5)]" } ! []
+init = {points = Parsing.parsePoint """[(4,4)
+, (5, 5)
+]""" } ! []
 
 update : Msg -> Model -> (Model, Cmd Msg)
 update _ model = (model, Cmd.none)
