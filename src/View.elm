@@ -5,5 +5,9 @@ import Models exposing (Model, Msg)
 
 root : Model -> Html Msg
 root model = div []
-    [ text ("hello, points is: ("++ toString model.points.x ++ ", " ++ toString model.points.y ++ ")")
+    ([ text "hello, points is: "
     ]
+    ++ List.map viewPoint model.points)
+
+viewPoint point =
+    text <| "("++ toString point.x ++ ", " ++ toString point.y ++ ")"

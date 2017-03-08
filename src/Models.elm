@@ -5,6 +5,6 @@ type alias Point =
   , y : Float
   }
 
-type alias Model = {points : Point}
+type alias Model = {points : List Point}
 
 type Msg = NoOp
